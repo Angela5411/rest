@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Register</title>
+         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+         <style>   
+  html { 
+  background: url(./picture/reg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+ #read-more {
+    
+        bottom: 20px;
+        right: 20px;
+        position: absolute;
+    }
+       </style>     
+        <SCRIPT >
+		function addRow(tableID) {
+
+			var table = document.getElementById(tableID);
+
+			var rowCount = table.rows.length;
+			var row = table.insertRow(rowCount);
+
+			var colCount = table.rows[0].cells.length;
+
+			for(var i=0; i<colCount; i++) {
+
+				var newcell	= row.insertCell(i);
+
+				newcell.innerHTML = table.rows[0].cells[i].innerHTML;
+				//alert(newcell.childNodes);
+				switch(newcell.childNodes[0].type) {
+					case "text":
+							newcell.childNodes[0].value = "";
+							break;
+					case "checkbox":
+							newcell.childNodes[0].checked = false;
+							break;
+					case "select-one":
+							newcell.childNodes[0].selectedIndex = 0;
+							break;
+				}
+			}
+		}
+
+		function deleteRow(tableID) {
+			try {
+			var table = document.getElementById(tableID);
+			var rowCount = table.rows.length;
+
+			for(var i=0; i<rowCount; i++) {
+				var row = table.rows[i];
+				var chkbox = row.cells[0].childNodes[0];
+				if((null != chkbox) && (true == chkbox.checked)) {
+					if(rowCount <= 1) {
+						alert("Cannot delete all the rows.");
+						break;
+					}
+					table.deleteRow(i);
+					rowCount--;
+					i--;
+				}
+
+
+			}
+			}catch(e) {
+				alert(e);
+			}
+		}
+
+	</SCRIPT>
+    </head>
+    <body>
+        
+        <h1  align="center"> <font color="#b30000"><b>INSERT INFORMATION:</b></font></h1>   
+<div class="w3-quarter">
+<form name="register" action="./register.jsp" method="get" >
+    <font color="#b30000"><b>Department--Faculty--Institution:</b><br></font>
+<select name="school">
+    <option value="100100">Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης--Πολυτεχνική σχολή--Τμημα Μηχανολόγων Μηχανικών</option>
+    <option value="100101">Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης--Πολυτεχνική σχολή--Τμημα Ηλεκτρολόγων Μηχανικών και Μηχανικών Υπολογιστών</option>
+    <option value="101100">Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης--Σχολή Θετικών Επιστημών--Τμημα Πληροφορικής</option>
+    <option value="200100">Δημοκρίτειο Πανεπιστήμιο Θράκης--Πολυτεχνική σχολή--Τμημα Ηλεκτρολόγων Μηχανικών και Μηχανικών Υπολογιστών</option>
+    <option value="300100">Εθνικό Μετσοβιο Πολυτεχνείο--Πολυτεχνική σχολή--Τμημα Ηλεκτρολόγων Μηχανικών και Μηχανικών Υπολογιστών</option>
+    <option value="400100">Εθνικό Καποδιστριακό Πανεπιστήμιο Αθηνών--Σχολή Θετικών Επιστημών--Τμημα Πληροφορικής και Τηλεπικοινωνιών</option>
+    <option value="500100">Οικονομικό Πανεπιστήμιο Αθηνών--Σχολή Επιστημών και Τεχνολογίας της Πληροφορίας--Τμημα Πληροφορικής</option>
+    <option value="600100">Πανεπιστήμιο Πειραιώς--Σχολή Πληροφορικής και Επικοινωνιών--Τμημα Πληροφορικής</option>
+    <option value="700100">Τει Αθήνας--Σχολή Τεχνολογικών Εφαρμογών--Τμημα Μηχανικών Υπολογιστών</option>
+    <option value="800100">Τει Κρήτης--Σχολή Τεχνολογικών Εφαρμογών--Τμημα Μηχανικών Υπολογιστών</option>
+  </select><br><br>
+   
+<font color="#b30000"><b>AM(username):</b><br></font>
+    <input type="text" name="am" required><br>
+<font color="#b30000"><b>Password:</b><br></font>
+    <input type="password" name="password" required><br>
+<font color="#b30000"> <b>Name:</b><br></font>
+    <input type="text" name="name" required><br>
+<font color="#b30000"><b>Surname:</b><br></font>
+    <input type="text" name="surname" required><br>
+
+<font color="#b30000"><b>Give URL from youtube:</b><br></font>
+ <INPUT type="button" value="Add Row" onclick="addRow('dataTable1')" />
+ <INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable1')" />
+	<TABLE id="dataTable1"  border="1">
+		<TR>
+			<TD><INPUT type="checkbox" name="check2"/></TD>
+			<TD><input type="text" name="video"/></TD>
+                </TR>
+	</TABLE><br>
+
+<font color="#b30000"><b>Give URL of a photo:</b><br></font>
+ <INPUT type="button" value="Add Row" onclick="addRow('dataTable2')" />
+ <INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable2')" />
+	<TABLE id="dataTable2"  border="1">
+		<TR>
+			<TD><INPUT type="checkbox" name="check2"/></TD>
+			<TD><input type="text" name="photo"/></TD>
+                </TR>
+	</TABLE><br><br><br>
+  </div>
+
+<div class="w3-third">
+    <br><br>
+    <div class="w3-container">
+<label for="file"> <font color="#b30000"><b> Choose your hobbies:</b></label><br></font>
+<div class="w3-half w3-container">
+<input type="checkbox" name="interest2" value="1" >Football<br>
+<input type="checkbox" name="interest2" value="2">Swimming<br>
+<input type="checkbox" name="interest2" value="3">Tennis<br>
+<input type="checkbox" name="interest2" value="4">Basketball<br>
+<input type="checkbox" name="interest2" value="5" >Fishing<br>
+<input type="checkbox" name="interest2" value="6">Photography<br>
+</div><div class="w3-half w3-container">
+<input type="checkbox" name="interest2" value="7" >Piano<br>
+<input type="checkbox" name="interest2" value="8" >Violin<br>
+<input type="checkbox" name="interest2" value="9" >Guitar<br>
+<input type="checkbox" name="interest2" value="10" >Drams<br>
+<input type="checkbox" name="interest2" value="11" >Reading Books<br>
+<input type="checkbox" name="interest2" value="12" >Drawing<br>
+ <br><br>
+</div></div>
+ 
+ <div class="w3-container">
+  <label for="file">  <font color="#b30000"><b>Choose your interests:</b></label><br></font>
+  <div class="w3-half w3-container">
+<input type="checkbox" name="interest1" value="1" >Database<br>
+<input type="checkbox" name="interest1" value="2" >Web programming<br>
+<input type="checkbox" name="interest1" value="3" >Human Computer Interaction<br>
+<input type="checkbox" name="interest1" value="4" >Data Mining<br>
+<input type="checkbox" name="interest1" value="5" >Software Engineering<br>
+</div><div class="w3-half w3-container">
+<input type="checkbox" name="interest1" value="6" >Information Retrieval<br>
+<input type="checkbox" name="interest1" value="7" >Software Quality<br>
+<input type="checkbox" name="interest1" value="8" >e-commerce<br>
+<input type="checkbox" name="interest1" value="9" >Management Information Systems<br>
+<input type="checkbox" name="interest1" value="10">Information Systems<br></div>
+ </div>  
+    <br> 
+    
+ <font color="#b30000"> <b>Insert the languages you know with the level of difficulty:</b><br></font>
+ <INPUT type="button" value="Add Row" onclick="addRow('dataTable3')" />
+	<INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable3')" />
+	<TABLE id="dataTable3"  border="1">
+		<TR>
+			<TD><INPUT type="checkbox" name="chk"/></TD>
+			<TD><INPUT type="text" name="lang"/></TD>
+			<TD>
+				<SELECT name="level">
+					<OPTION value="elementary">elementary</OPTION>
+					<OPTION value="intermediate">intermediate</OPTION>
+					<OPTION value="advanced">advanced</OPTION>
+                                        <OPTION value="proficient">proficient</OPTION>
+					
+				</SELECT>
+			</TD>
+		</TR>
+	</TABLE>
+        <br>
+        
+</div>     
+
+<div class="w3-rest"> 
+<br><br>
+<b>Insert your birthdate:</b><br>
+    <input type="date" name="bday" required><br><br>
+    
+  <font color="#b30000"><b>My cv:</b><br></font>
+<textarea name="cv" placeholder="My cv:" rows="5" cols="50" > </textarea><br><br>
+ 
+          <font color="#b30000"> <b>Add a quote:</b><br></font>
+ <INPUT type="button" value="Add Row" onclick="addRow('dataTable4')" />
+ <INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable4')" />
+	<TABLE id="dataTable4"  border="1">
+		<TR>
+			<TD><INPUT type="checkbox" name="check2"/></TD>
+			<TD><textarea name="quote" rows="5" cols="50"/></textarea></TD>
+                </TR>
+	</TABLE><br><br><br>
+        <br> <h2><input id="read-more" type="submit" style="color:red"  value="SEND">  </h2>      
+</div>
+        
+</body>
+</html>
