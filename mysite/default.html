@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "master.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!-- #BeginEditable "doctitle" -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+<title>Αρχική</title>
+<!-- #EndEditable -->
+<link href="styles/style3.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+		<h1>Medieval</h1>
+		<h3>Η ήσυχη επιλογή</h3>
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation" style="left: 0px; top: 0px">
+		<ul>
+			<li><a href="default.html">Αρχική</a></li>			
+			<li><a href="menu/default.html">Μενού</a></li>
+			<li><a href="information/default.html">Πληροφορίες</a></li>
+			<li><a href="news/default.html">Νέα</a></li>
+			<li><a href="calendar/default.html">Ημερολόγιο</a></li>
+			<li><a href="photo_gallery/default.html">Άλμπουμ Φωτογραφιών</a></li>
+			<li><a href="faq/default.html">Ερωτήσεις</a></li>
+			<li><a href="contact/default.html">Επικοινωνία</a></li>
+		</ul>
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin Content -->
+	<div id="content">
+		<!-- #BeginEditable "content" -->
+	<div id="content0">
+ 		<div class="w3-content w3-display-container">
+		  <img alt="" class="mySlides" src="images/imageq.jpg" style="width:100%"/>
+		  <img alt="" class="mySlides" src="images/d9.jpeg" style="width:100%"/>
+		  <img alt="" class="mySlides" src="images/p2.jpeg" style="width:100%"/>
+		  <img alt="" class="mySlides" src="images/p5.jpeg" style="width:100%"/>
+		
+		  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+		</div><!-- End Container -->
+
+
+		<h2>Εγγυόμαστε την ικανοποίηση σας</h2>
+		<p>Μια μικρή όαση στη φασαρία και την κοσμοσυρροή της Αθήνας. 
+		Ένας άνετος και ζεστός χώρος με απαλή μουσική είναι το ιδανικό μέρος ώστε να ξεφύγετε από την καθημερινότητα και να συνομιλήσετε με τους φίλους σας.
+		Να είστε σίγουροι ότι εύκολα θα ερωτευτείτε με το "Medieval" για την ιδιαίτερη ελκυστική ατμόσφαιρα του, 
+		την αυθεντικότητα και τη φιλικότητα των ιδιοκτητών του.</p>
+
+
+
+<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+		
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+		
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  if (n > x.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+		    x[i].style.display = "none";  
+		  }
+		  x[slideIndex-1].style.display = "block"; 
+ 
+		}
+</script>
+
+
+
+		</div>
+
+
+
+		<!-- #EndEditable "content" -->
+	</div>
+	<!-- End Content -->
+	<!-- Begin Footer -->
+	<div id="footer">
+		<p><a href="default.html">Αρχική</a> 
+		|  <a href="menu/default.html">Μενού</a> 			
+		|  <a href="information/default.html">Πληροφορίες</a>
+		|  <a href="news/default.html">Νέα</a> 
+		|  <a href="calendar/default.html">Ημερολόγιο</a> 
+		|  <a href="photo_gallery/default.html">Άλμπουμ Φωτογραφιών</a> 
+		|  <a href="faq/default.html">Ερωτήσεις</a> 
+		|  <a href="contact/default.html">Επικοινωνία</a>
+		</p>
+	</div>
+	<!-- End Footer --></div>
+<!-- End Container -->
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

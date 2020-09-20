@@ -1,0 +1,52 @@
+﻿body { 
+   font-family: Calibri; 
+   font-size: medium; 
+   font-weight: normal; 
+   font-style: normal; 
+   font-variant: normal; 
+   text-transform: none; 
+   color: #0000FF; 
+   background-color: #CCFFFF; 
+   background-image: none; 
+   border: medium double #FF0000; 
+} 
+
+#container { 
+   background-color: #FFFFFF; 
+   padding: 8px; 
+   margin: 8px; 
+   width: 90%; 
+} 
+
+#header {  
+   background-color: #54B431;   
+   background-repeat: no-repeat;  
+   background-position: right center;  
+   height: 170px;  
+} 
+
+#top-nav {  
+   height: 50px;  
+   border-top: solid medium #006600;  
+   border-bottom: solid medium #006600;  
+   background-color: #FFFFFF;  
+}  
+
+#left-nav {  
+   margin: 20px 0px 10px 0px;  
+   width: 180px;  
+   float: left;  
+   border: thin dashed #006600;  
+} 
+
+#main-content {  
+   margin: 20px 10px 10px 200px;  
+   background-color: #CCFFCC; 
+} 
+
+#footer {  
+   border-top: 2px solid #006600;  
+   clear: both;  
+   padding: 10px 0px;  
+   text-align: center;  
+}

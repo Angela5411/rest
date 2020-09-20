@@ -1,0 +1,33 @@
+﻿body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-image: url('../images/b10.jpeg');
+	background-repeat: repeat;
+}
+#container {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-color: #000000;
+}
+#masthead {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#navigation {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#content {
+	margin: 0;
+	padding: 0;
+	border: 0 none #000000;
+}
+#footer {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}

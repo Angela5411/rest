@@ -1,0 +1,215 @@
+﻿@import url("layout.css");
+#container {
+	width: 700px;
+	margin: 10px auto;
+}
+#masthead {
+	text-align: center;
+	width: 698px;
+	background-color: #000000;
+	background-image: url('../images/b12.jpeg');
+	background-repeat: repeat;
+	background-attachment: scroll;
+}
+#navigation {
+	position: relative;
+	float: left;
+	width: 148px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #000000;
+	background-color: #000000;
+}
+#content {
+	float: left;
+	width: 518px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	padding: 10px;
+	border: 1px solid #000000;
+	background-color: #000000;
+	color: #F0F0F4;
+}
+#footer {
+	text-align: center;
+	clear: both;
+	width: 698px;
+	padding: 0px;
+	border: 1px solid #431;
+	background-color: #000000;
+}
+/* Masthead Styles */
+#masthead h1 {
+	color: #FFFFFF;
+	font-family: "Segoe Script";
+	font-weight: 800;
+	font-size: xx-large;
+}
+#masthead h3 {
+	color: #B5B4CD;
+	font-weight: bold;
+	font-size: x-large;
+	font-family: Arial, Helvetica, sans-serif;
+}
+/* Navigation Styles */
+#navigation ul {
+	list-style-type: none;
+	width: 100%;
+	display: block;
+	margin: 0;
+	padding: 0;
+	background-color: #000000;
+}
+#navigation li {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #000000;
+	background-color: #000000;
+}
+#navigation a {
+	color: #B5B4CD;
+	text-decoration: none;
+	display: block;
+	padding: 5px;
+	border: 1px solid #000000;
+	background-color: #000;
+}
+#navigation a:hover {
+	color: #54527A;
+	text-decoration: none;
+	border: 1px solid #54527A;
+	background-color: #000000;
+}
+/* Content Styles */
+#content h1,h2,h3,h4,h5,h6 {
+	color: #B5B4CD;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: 500;
+}
+/* Footer Styles */
+#content img {
+	display: block;
+	padding: 5px;
+	border: 1px solid #000000;
+	margin-right:auto;
+	float: none;
+	vertical-align: middle;
+	text-align: center;
+	right: auto;
+	margin-left: auto;
+}
+#content ul{
+	list-style-type: none;
+	text-align: left;
+	margin-right: auto;
+	width: 177px;
+	margin-left: auto;
+	right: auto;
+	left: auto;
+	line-height: 30px;
+	color: #FFFFFF;
+}
+	
+	
+}
+#footer p {
+	color: #808080;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+#footer a {
+	color: #CCCCFF;
+	text-decoration: underline;
+	background-color: #000000;
+	font-size: small;
+}
+#footer a:hover {
+	color: #54527A;
+	text-decoration: underline;
+}
+.menu{
+	border-style: inherit;
+	border-width: 10px;
+	border-color: #B5B4CD;
+	padding: 10px;
+	margin: 50px;
+}
+
+a{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a:hover {
+	color: #54527A;
+	text-decoration: underline;
+}
+.style_bold {
+	font-weight: bold;
+}
+.style_italic {
+	font-style: italic;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 35%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+.category{
+	border-width: 4px;
+	border-color: #54527A;
+	padding: 4px;
+	margin: 4px auto;
+	text-align: center;
+	font-weight: 700;
+	color: #000000;
+	background-color: #FFFFFF;
+	width: 165px;
+	vertical-align: middle;
+	right: auto;
+	left: auto;
+}
+	
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+#layer1{
+	color: #FFFFFF;
+	background-color: #54527A;
+}
